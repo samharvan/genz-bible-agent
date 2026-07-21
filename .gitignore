@@ -1,0 +1,15 @@
+# Secrets — never commit
+.env
+.aws/
+
+# Scraped corpus: third-party content, regenerable via scripts/test_scraping_data.py
+genz_bible_data/
+*.json.gz
+
+# Vector store: regenerable by re-indexing
+chroma/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
