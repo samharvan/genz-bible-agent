@@ -20,7 +20,7 @@ repository so they exist somewhere durable and attributable.
 | `validate_books.py`, `parse_test.py`, `scripts/test_parse.py`, `run_test_single.py`, `run_eval.py` | Parser and scrape-integrity checks used while iterating on the extractor. |
 | `scripts/request_bedrock_quotas.py` | CLI to list and request AWS Bedrock quota increases across the models used. |
 | `notebooks/guardrails.ipynb` | Input and output guardrails (see below). Derived from course material — see Attribution. |
-| `start_on_render.sh` | Entrypoint used to run the Chainlit app on Render. |
+| `start_on_render.sh` | Entrypoint used to deploy the Chainlit app to Render. |
 
 ## Approach
 
@@ -35,7 +35,9 @@ error rather than as a thin retrieval index nobody notices.
 
 **Retrieval and serving.** Chunks are embedded into a ChromaDB vector store and wrapped as
 an OpenAI Agents SDK agent behind a Chainlit chat UI, backed by AWS Bedrock models
-(Amazon Nova, Claude 3 Haiku) through litellm.
+(Amazon Nova, Claude 3 Haiku) through litellm. The app was deployed to Render and
+demonstrated running live at the end of the sprint. That deployment was for the
+assignment and is no longer up.
 
 **Guardrails** (my main contribution to the agent itself, in `notebooks/guardrails.ipynb`):
 
